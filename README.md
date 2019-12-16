@@ -26,8 +26,8 @@ sudo apt install openjdk-13-jdk
 java -version
 ```
 
-* Run the hello_world.clj
+* Run the hello_world.clj (in the syntax dir)
 
 ```bash
-clojure hello_world.clj
+clojure syntax/hello_world.clj
 ```
