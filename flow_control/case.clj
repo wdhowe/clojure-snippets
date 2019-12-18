@@ -1,4 +1,4 @@
-;;; case expression
+;;; case expression - constant time value matching
 
 (defn myfunc [x]
   (case x
