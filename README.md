@@ -6,6 +6,13 @@ Clojure example snippets
 
 ## Install Clojure
 
+* Pre-Req: Install openjdk and verify
+
+```bash
+sudo apt install openjdk-13-jdk
+java -version
+```
+
 * Download clojure installer
 
 ```bash
@@ -19,15 +26,82 @@ chmod +x linux-install-1.10.1.478.sh
 sudo ./linux-install-1.10.1.478.sh
 ```
 
-* Install openjdk and verify
-
-```bash
-sudo apt install openjdk-13-jdk
-java -version
-```
-
 * Run the hello_world.clj (in the syntax dir)
 
 ```bash
 clojure syntax/hello_world.clj
+```
+
+## Leiningen
+
+Leiningen is for mangaing Clojure projects. It is similar to pipenv in the Python world, in that it manages project space and dependent packages.
+
+Offical Site: `https://leiningen.org/`
+
+### Install Leiningen
+
+* Download the installer
+
+```bash
+wget https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein
+```
+
+* Put the installer in a location in your PATH and make executable
+
+```bash
+mv lein ~/bin/
+chmod +x ~/bin/lein
+```
+
+* Run lein. It will auto setup everything you need.
+
+```bash
+./lein
+```
+
+### Using Leiningen
+
+Full tutorial/more details: `https://github.com/technomancy/leiningen/blob/stable/doc/TUTORIAL.md`
+
+* View available lein commands
+
+```bash
+lein help
+```
+
+* Create a new app project (replace "hello_world" with your project name)
+
+```bash
+lein new app hello_world
+
+# change into the new project directory for the rest of the commands
+cd hello_world
+```
+
+* Run the "-main" part of your app
+
+```bash
+lein run
+```
+
+* Run the project's unit tests
+
+```bash
+lein test
+```
+
+* Run the interactive REPL (read eval print loop)
+
+```bash
+lein repl
+```
+
+* Create a standalone executable jar file of your entire project
+
+```bash
+# create the standalone jar
+lein uberjar
+
+# run the standalone jar
+java -jar target/uberjar/hello_world-0.1.0-SNAPSHOT-standalone.jar
 ```
