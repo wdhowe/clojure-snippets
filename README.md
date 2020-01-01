@@ -155,13 +155,20 @@ boot repl
 
 #### Use boot for single file scripts
 
-```bash
+```clojure
 #!/usr/bin/env boot
-;; http gets with the clj-http package (from https://clojars.org/)
 
-; clojure boot environment settings
+; boot environment settings - downloads dependencies automatically
 (set-env! :dependencies '[[clj-http "3.10.0"]])
+
+(ns boot-http-get-clojure-client
+  (:gen-class)
+  (:require [clj-http.client :as http])
+)
+
+;; ...the rest of the script
 ```
 
 * The shebang env boot line (first line), uses the boot binary
 * The set-env line will auto download required dependencies from remote sources such as `https://clojars.org/`
+* The namespace (ns) section as normal
