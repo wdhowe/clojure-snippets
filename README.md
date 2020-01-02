@@ -161,10 +161,8 @@ boot repl
 ; boot environment settings - downloads dependencies automatically
 (set-env! :dependencies '[[clj-http "3.10.0"]])
 
-(ns boot-http-get-clojure-client
-  (:gen-class)
-  (:require [clj-http.client :as http])
-)
+; boot clojar requirement
+(require '[clj-http.client :as http])
 
 ;; ...the rest of the script
 ```
