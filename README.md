@@ -169,4 +169,4 @@ boot repl
 
 * The shebang env boot line (first line), uses the boot binary
 * The set-env line will auto download required dependencies from remote sources such as `https://clojars.org/`
-* The namespace (ns) section as normal
+* The require section to use any libraries
