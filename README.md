@@ -4,6 +4,26 @@ Clojure example snippets
 
 ----
 
+## Descriptions
+
+Directories
+
+* collections -> Snippets for collection data types (lists, maps, sets, vectors)
+* flow_control -> Snippets for flow control concepts (case, cond, iters, for, if, when, recursion)
+* functions -> Snippets for using functions (and anonymous/lambda) in clojure
+* http-get -> Lein project that performs a http/get on a url. Uses clj-http and tools.cli for cli arguments.
+* power_tools -> Snippets for some powerful Clojure core built in core functions (apply, comp, filter, loop, map, partial, reduce)
+* syntax -> Snippets for basic syntax (hello world, math operators, comparison operators, variables)
+
+Files
+
+* file_check.clj -> Checks to see if a file exists on disk
+* file_write.clj -> Opens a file and writes to it
+* http_get_cli_args.boot -> http/get via boot cli args
+* http_get_pos_args.boot -> http/get via boot positional args
+
+----
+
 ## Install Clojure
 
 * Pre-Req: Install openjdk and verify
