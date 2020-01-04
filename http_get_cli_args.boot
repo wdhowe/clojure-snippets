@@ -15,7 +15,9 @@
 
 (cli/defclifn -main
   "HTTP Headers and Response with clj-http. Uses boot cli args for URL."
+  ; short-option long-option parameter(optional) type description
   [u url URL str "address to http/get on."]
+  ; Note: -h (help) is built into the boot cli arg parser
 
   (if (nil? url)
     (throw (IllegalArgumentException. "URL (-u) was not provided."))
