@@ -21,6 +21,7 @@ Files
 * file_write.clj -> Opens a file and writes to it
 * http_get_cli_args.boot -> http/get via boot cli args
 * http_get_pos_args.boot -> http/get via boot positional args
+* template.boot -> Template to quickly start a single file Clojure script via boot with cli args
 
 ----
 
