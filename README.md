@@ -14,6 +14,7 @@ Directories
 * http-get -> Lein project that performs a http/get on a url. Uses clj-http and tools.cli for cli arguments.
 * power_tools -> Snippets for some powerful Clojure core built in core functions (apply, comp, filter, loop, map, partial, reduce)
 * syntax -> Snippets for basic syntax (hello world, math operators, comparison operators, variables)
+* template -> Template tree for standard Clojure file with cli args (run 'clj -m template -h' from that dir)
 
 Files
 
