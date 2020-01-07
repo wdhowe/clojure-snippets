@@ -19,8 +19,9 @@
   [u url URL str "address to http/get on."]
   ; Note: -h (help) is built into the boot cli arg parser
 
-  (if (nil? url)
-    (throw (IllegalArgumentException. "URL (-u) was not provided."))
+  (when (nil? url)
+    (println "-> URL (-u) was not provided.")
+    (System/exit 1)
   )
 
   (println "-> HTTP/GET on:" url)
