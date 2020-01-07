@@ -9,6 +9,7 @@ Clojure example snippets
 Directories
 
 * collections -> Snippets for collection data types (lists, maps, sets, vectors)
+* config-test -> Lein project that loads a simple EDN file for configuration.
 * flow_control -> Snippets for flow control concepts (case, cond, iters, for, if, when, recursion)
 * functions -> Snippets for using functions (and anonymous/lambda) in clojure
 * http-get -> Lein project that performs a http/get on a url. Uses clj-http and tools.cli for cli arguments.
