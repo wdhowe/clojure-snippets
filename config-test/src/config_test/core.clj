@@ -12,7 +12,7 @@
 
 (defn -main
   "Using edn(extensible data notation) for configuration."
-  [& args]
+  []
   (let [config (load-config "person.edn")
         my-name (:myname config)
         my-age (:myage config)]
