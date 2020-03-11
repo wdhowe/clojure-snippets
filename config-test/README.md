@@ -21,5 +21,5 @@ Run the project core source file.
 ```bash
 lein run
 ```
-...
 
+...
