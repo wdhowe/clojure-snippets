@@ -8,22 +8,19 @@ Clojure example snippets
 
 Directories
 
-* collections -> Snippets for collection data types (lists, maps, sets, vectors)
+* collections -> Collection data types (lists, maps, sets, vectors)
 * config-test -> Lein project that loads a simple EDN file for configuration.
-* flow_control -> Snippets for flow control concepts (case, cond, iters, for, if, when, recursion)
-* functions -> Snippets for using functions (and anonymous/lambda) in clojure
-* http-get -> Lein project that performs a http/get on a url. Uses clj-http and tools.cli for cli arguments.
-* power_tools -> Snippets for some powerful Clojure core built in core functions (apply, comp, filter, loop, map, partial, reduce)
-* syntax -> Snippets for basic syntax (hello world, math operators, comparison operators, variables)
-* template -> Template tree for standard Clojure file with cli args (run 'clj -m template -h' from that dir)
+* file-operations -> Interacting with files
+* flow_control -> Flow control concepts (case, cond, iters, for, if, when, recursion)
+* functions -> Using functions (and anonymous/lambda) in clojure
+* http -> Http/get examples
+* power_tools -> Some powerful Clojure core built in core functions (apply, comp, filter, loop, map, partial, reduce)
+* syntax -> Basic syntax (hello world, math operators, comparison operators, variables)
+* template -> Template for a Clojure project with cli args (run 'clj -m template -h' from that dir)
 
 Files
 
-* file_check.clj -> Checks to see if a file exists on disk
-* file_write.clj -> Opens a file and writes to it
-* http_get_cli_args.boot -> http/get via boot cli args
-* http_get_pos_args.boot -> http/get via boot positional args
-* template.boot -> Template to quickly start a single file Clojure script via boot with cli args
+* template.boot -> Template for a single file Clojure script via boot with cli args
 
 ----
 
