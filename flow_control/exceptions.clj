@@ -7,7 +7,7 @@
 (try
      (/ x y)
      (catch ArithmeticException e
-       "divide by zero")
+       (println "divide by zero"))
      (finally
        (println "cleanup")
      )
