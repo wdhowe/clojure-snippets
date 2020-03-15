@@ -4,11 +4,11 @@
 (def mylist2 (vector :a :b :c :d :e :f :g :h :i :j))
 
 ; increment all items in a vector
-(println (map inc mylist) )
+(println (map inc mylist))
 
 ; map a lambda function to a vector's values
-(println (map (fn [x] (* x x)) mylist) )
+(println (map (fn [x] (* x x)) mylist))
 
 ; map a function across two collections, stop automatically
 ; when the shorter collection runs out of items
-(println (map (fn [x y] (str x y) ) mylist2 mylist) )
+(println (map (fn [x y] (str x y)) mylist2 mylist))

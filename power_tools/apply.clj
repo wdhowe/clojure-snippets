@@ -6,7 +6,7 @@
 ; (max mylist) ;; won't work
 
 (println "Max of:" mylist)
-(println (apply max mylist) )
+(println (apply max mylist))
 
 (println "\nMax of:" mylist "and extras:" 35 100)
-(println (apply max 35 100 mylist) )
+(println (apply max 35 100 mylist))

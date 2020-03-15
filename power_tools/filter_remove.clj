@@ -4,8 +4,8 @@
 
 ; filter - return only what returns true
 (println "Filter odd")
-(println (filter odd? mylist) )
+(println (filter odd? mylist))
 
 ; reduce - remove items that return true
 (println "\nRemove odd")
-(println (remove odd? mylist) )
+(println (remove odd? mylist))
