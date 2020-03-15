@@ -23,18 +23,17 @@
 (defn -main
   "HTTP Headers and Response with clj-http. Uses boot cli args for URL."
   [& args]
-  ; parse command line args
-  (def cli_args (clojure.tools.cli/parse-opts args cli_options))
-  ;(println "All args:\n" cli_args)
-  ; show usage when help flag set and exit
-  (when (get-in cli_args [:options :help])
-    (show_usage cli_args)
-    (System/exit 0))
-  ; extract the url from the cli args
-  (def url (get-in cli_args [:options :url]))
-  (println "-> HTTP/GET on:" url)
-  ; execute the http/get on the url
-  (def response (get_url url))
-  (println "\n-> Available keys are:" (keys response)
-           "\n\n-> Response status code:" (:status response)
-           "\n\n-> Headers are:" (:headers response)))
+  (let [; parse command line args
+        cli_args (clojure.tools.cli/parse-opts args cli_options)
+        ; extract the url from the cli args
+        url (get-in cli_args [:options :url])
+        ; execute the http/get on the url
+        response (get_url url)]
+    ; show usage when help flag set and exit
+    (when (get-in cli_args [:options :help])
+      (show_usage cli_args)
+      (System/exit 0))
+    (println "-> HTTP/GET on:" url)
+    (println "\n-> Available keys are:" (keys response)
+             "\n\n-> Response status code:" (:status response)
+             "\n\n-> Headers are:" (:headers response))))
