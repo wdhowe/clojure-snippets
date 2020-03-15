@@ -2,8 +2,7 @@
 (defn messenger
   ([] (messenger "world!"))
   ([msg] (println "Hello," msg))
-  ([msg1 msg2] (println msg1 msg2))
-)
+  ([msg1 msg2] (println msg1 msg2)))
 
 ; call with no args
 (messenger)
