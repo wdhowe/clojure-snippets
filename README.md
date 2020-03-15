@@ -9,12 +9,12 @@ Clojure example snippets
 Directories
 
 * collections -> Collection data types (lists, maps, sets, vectors)
-* config-test -> Lein project that loads a simple EDN file for configuration.
-* file-operations -> Interacting with files
+* file-operations -> Interacting with files and EDN for configuration.
 * flow_control -> Flow control concepts (case, cond, iters, for, if, when, recursion)
 * functions -> Using functions (and anonymous/lambda) in clojure
 * http -> Http/get examples
-* power_tools -> Some powerful Clojure core built in core functions (apply, comp, filter, loop, map, partial, reduce)
+* misc -> Miscellanious items (date)
+* power_tools -> Some powerful Clojure built in core functions (apply, comp, filter, loop, map, partial, reduce)
 * syntax -> Basic syntax (hello world, math operators, comparison operators, variables)
 * template -> Template for a Clojure project with cli args (run 'clj -m template -h' from that dir)
 
@@ -126,6 +126,36 @@ lein uberjar
 
 # run the standalone jar
 java -jar target/uberjar/hello_world-0.1.0-SNAPSHOT-standalone.jar
+```
+
+### Leiningen Plugins
+
+Lein can be extended via plugins.
+
+Some useful plugins are:
+
+* lein-exec -> Allows single clojure files to be executed and their requirements resolved.
+* lein-zprint -> Pretty format a clojure source file
+
+Plugins can be added to the 'plugins' vector of:
+
+* ~/.lein/profiles.clj -> cross project profiles for plugins
+* A lein project's project.clj -> project specific plugins
+
+profiles.clj example:
+
+```clojure
+{:user {:plugins [[lein-localrepo "0.5.4"]
+                  [lein-exec "0.3.7"]
+                  [lein-zprint "0.5.3"]]}}
+```
+
+project.clj example:
+
+```clojure
+(defproject myproject "0.1.0"
+;; description, url, license, dependencies, profiles, etc
+:plugins [[lein-zprint "0.5.3"]])
 ```
 
 ----
