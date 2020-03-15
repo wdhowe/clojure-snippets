@@ -1,4 +1,4 @@
-(ns file_check
+(ns file-check
   (:gen-class)
   (:require [clojure.java.io :as io]))
 
