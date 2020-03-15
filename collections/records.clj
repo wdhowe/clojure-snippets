@@ -14,11 +14,9 @@
 (println "Lightsaber color is:" (:lightsaber yoda))
 
 ; map constructor method
-(def mace (map->Jedi
-            {:name "Mace Windu"
-            :lightsaber "purple"
-            :job "member of council"} ))
+(def mace
+  (map->Jedi
+    {:name "Mace Windu", :lightsaber "purple", :job "member of council"}))
 
 (println "\nCreated record (mapped):" mace)
 (println "Lightsaber color is:" (:lightsaber mace))
-
