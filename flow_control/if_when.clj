@@ -7,9 +7,9 @@
 (println mynum "< 50?" (if (< mynum 50) "smallish" "large-ish"))
 
 ; if expression without the optional "else"
-(println "is true, false?" (if (true? false) "impossible!") )
+(println "is true, false?" (if (true? false) "impossible!"))
 
 ;;; when expression - if with explicitly only a "then", no else
 
-(when (neg? mynum) (println "I'm pretty sure its negative, but I'm not positive."))
-
+(when (neg? mynum)
+  (println "I'm pretty sure its negative, but I'm not positive."))
