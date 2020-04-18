@@ -9,7 +9,7 @@ Clojure example snippets
 Directories
 
 * collections -> Collection data types (lists, maps, sets, vectors)
-* file-operations -> Interacting with files and EDN for configuration.
+* file_operations -> Interacting with files and EDN for configuration.
 * flow_control -> Flow control concepts (case, cond, iters, for, if, when, recursion)
 * functions -> Using functions (and anonymous/lambda) in clojure
 * http -> Http/get examples
