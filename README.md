@@ -1,6 +1,8 @@
 # clojure-snippets
 
-Clojure example snippets
+Clojure example snippets.
+
+Single files that showcase syntax and/or a concept.
 
 ----
 
