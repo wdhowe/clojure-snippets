@@ -48,10 +48,12 @@ Templates
   sudo ./linux-install-1.10.1.478.sh
   ```
 
-* Run the hello_world.clj (in the syntax dir)
+* Run the Clojure REPL and print hello (ctrl+d to quit)
 
   ```bash
-  clj syntax/hello_world.clj
+  clj
+
+  user=> (println "Hello!")
   ```
 
 ----
