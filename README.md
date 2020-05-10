@@ -8,7 +8,7 @@ Single files that showcase syntax and/or a concept.
 
 ## Descriptions
 
-Directories
+Snippets
 
 * collections -> Collection data types (lists, maps, sets, vectors)
 * file_operations -> Interacting with files and EDN for configuration.
@@ -18,10 +18,10 @@ Directories
 * misc -> Miscellanious items (date)
 * power_tools -> Some powerful Clojure built in core functions (apply, comp, filter, loop, map, partial, reduce)
 * syntax -> Basic syntax (hello world, math operators, comparison operators, variables)
-* template -> Template for a Clojure project with cli args (run 'clj -m template -h' from that dir)
 
-Files
+Templates
 
+* template -> Template for a Clojure CLI/deps project with cli args. (run 'clj -m template -h' from that dir) Does not need boot or lein.
 * template.boot -> Template for a single file Clojure script via boot with cli args
 
 ----
@@ -30,35 +30,86 @@ Files
 
 * Pre-Req: Install openjdk and verify
 
-```bash
-sudo apt install openjdk-13-jdk
-java -version
-```
+  ```bash
+  sudo apt install openjdk-13-jdk
+  java -version
+  ```
 
 * Download clojure installer
 
-```bash
-curl -O https://download.clojure.org/install/linux-install-1.10.1.478.sh
-```
+  ```bash
+  curl -O https://download.clojure.org/install/linux-install-1.10.1.478.sh
+  ```
 
 * Make executable and run
 
-```bash
-chmod +x linux-install-1.10.1.478.sh
-sudo ./linux-install-1.10.1.478.sh
-```
+  ```bash
+  chmod +x linux-install-1.10.1.478.sh
+  sudo ./linux-install-1.10.1.478.sh
+  ```
 
 * Run the hello_world.clj (in the syntax dir)
 
-```bash
-clojure syntax/hello_world.clj
-```
+  ```bash
+  clj syntax/hello_world.clj
+  ```
 
 ----
 
-## Leiningen
+## Clojure CLI/deps Projects
 
-Leiningen is for mangaing Clojure projects. It is similar to pipenv in the Python world, in that it manages project space and dependent packages.
+Clojure CLI tools (with deps.edn) allow for a built in way to create projects.
+
+Official CLI/deps guide: `https://clojure.org/guides/deps_and_cli`
+
+The basics:
+
+* Create a project directory structure
+
+  ```bash
+  mkdir -p my_project/src/my_project
+  cd my_project
+  ```
+
+* Create a deps.edn file (manages project information).
+
+  Example deps.edn contents
+
+  * paths -> Directory paths to be included in the classpath
+  * deps -> Dependent packages.
+
+  ```clojure
+  {:paths ["src" "classes"]
+   :deps {org.clojure/tools.cli {:mvn/version "0.4.2"}}}
+  ```
+
+* Create the project's main file.
+
+  ```bash
+  vim src/my_project/core.clj
+  ```
+
+  Example Contents
+
+  ```clojure
+  (ns my-project.core
+   (:gen-class))
+
+  (defn -main [& args]
+   (println "Hello Clojure World"))
+  ```
+
+* Run the app's '-main' function by referencing the namespace.
+
+  ```bash
+  clj -m my-project.core
+  ```
+
+----
+
+## Leiningen Projects
+
+Leiningen is another method for managing Clojure projects. It is similar to pipenv in the Python world, in that it manages project space and dependent packages.
 
 Offical Site: `https://leiningen.org/`
 
@@ -66,22 +117,22 @@ Offical Site: `https://leiningen.org/`
 
 * Download the installer
 
-```bash
-wget https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein
-```
+  ```bash
+  wget https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein
+  ```
 
 * Put the installer in a location in your PATH and make executable
 
-```bash
-mv lein ~/bin/
-chmod +x ~/bin/lein
-```
+  ```bash
+  mv lein ~/bin/
+  chmod +x ~/bin/lein
+  ```
 
 * Run lein. It will auto setup everything you need.
 
-```bash
-./lein
-```
+  ```bash
+  ./lein
+  ```
 
 ### Using Leiningen
 
@@ -89,46 +140,46 @@ Full tutorial/more details: `https://github.com/technomancy/leiningen/blob/stabl
 
 * View available lein commands
 
-```bash
-lein help
-```
+  ```bash
+  lein help
+  ```
 
 * Create a new app project (replace "hello_world" with your project name)
 
-```bash
-lein new app hello_world
+  ```bash
+  lein new app hello_world
 
-# change into the new project directory for the rest of the commands
-cd hello_world
-```
+  # change into the new project directory for the rest of the commands
+  cd hello_world
+  ```
 
 * Run the "-main" part of your app
 
-```bash
-lein run
-```
+  ```bash
+  lein run
+  ```
 
 * Run the project's unit tests
 
-```bash
-lein test
-```
+  ```bash
+  lein test
+  ```
 
 * Run the interactive REPL (read eval print loop)
 
-```bash
-lein repl
-```
+  ```bash
+  lein repl
+  ```
 
 * Create a standalone executable jar file of your entire project
 
-```bash
-# create the standalone jar
-lein uberjar
+  ```bash
+  # create the standalone jar
+  lein uberjar
 
-# run the standalone jar
-java -jar target/uberjar/hello_world-0.1.0-SNAPSHOT-standalone.jar
-```
+  # run the standalone jar
+  java -jar target/uberjar/hello_world-0.1.0-SNAPSHOT-standalone.jar
+  ```
 
 ### Leiningen Plugins
 
@@ -162,9 +213,9 @@ project.clj example:
 
 ----
 
-## Boot
+## Boot Projects
 
-Boot is an alternative build tool to Leiningen. It can also be used for single file Clojure scripts if you don't want to create a full project.
+Boot is an alternative project management/build tool to Leiningen. It can also be used for single file Clojure scripts if you don't want to create a full project.
 
 Official site: `https://boot-clj.com/`
 
@@ -172,22 +223,22 @@ Official site: `https://boot-clj.com/`
 
 * Download the boot binary
 
-```bash
-wget https://github.com/boot-clj/boot-bin/releases/download/latest/boot.sh
-```
+  ```bash
+  wget https://github.com/boot-clj/boot-bin/releases/download/latest/boot.sh
+  ```
 
 * Move to a directory in your PATH and make executable
 
-```bash
-mv boot.sh ~/bin/boot
-chmod +x ~/bin/boot
-```
+  ```bash
+  mv boot.sh ~/bin/boot
+  chmod +x ~/bin/boot
+  ```
 
 * Initial execution in order to download requirements (boot -h > help)
 
-```bash
-boot -h
-```
+  ```bash
+  boot -h
+  ```
 
 ### Using Boot
 
@@ -195,15 +246,15 @@ Full tutorial/more details: `https://github.com/boot-clj/boot`
 
 * Available boot commands/help
 
-```bash
-boot -h
-```
+  ```bash
+  boot -h
+  ```
 
 * Open the boot REPL
 
-```bash
-boot repl
-```
+  ```bash
+  boot repl
+  ```
 
 #### Use boot for single file scripts
 
