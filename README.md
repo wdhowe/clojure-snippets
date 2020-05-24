@@ -2,7 +2,7 @@
 
 Clojure example snippets.
 
-Single files that showcase syntax and/or a concept.
+Short files that demonstrate syntax and concepts.
 
 ----
 
@@ -62,7 +62,7 @@ Templates
 
 Clojure CLI tools (with deps.edn) allow for a built in way to create projects.
 
-Official CLI/deps guide: `https://clojure.org/guides/deps_and_cli`
+Official CLI/deps guide: <https://clojure.org/guides/deps_and_cli>
 
 The basics:
 
@@ -113,7 +113,7 @@ The basics:
 
 Leiningen is another method for managing Clojure projects. It is similar to pipenv in the Python world, in that it manages project space and dependent packages.
 
-Offical Site: `https://leiningen.org/`
+Offical Site: <https://leiningen.org/>
 
 ### Install Leiningen
 
@@ -138,7 +138,7 @@ Offical Site: `https://leiningen.org/`
 
 ### Using Leiningen
 
-Full tutorial/more details: `https://github.com/technomancy/leiningen/blob/stable/doc/TUTORIAL.md`
+Full tutorial/more details: <https://github.com/technomancy/leiningen/blob/stable/doc/TUTORIAL.md>
 
 * View available lein commands
 
@@ -219,7 +219,7 @@ project.clj example:
 
 Boot is an alternative project management/build tool to Leiningen. It can also be used for single file Clojure scripts if you don't want to create a full project.
 
-Official site: `https://boot-clj.com/`
+Official site: <https://boot-clj.com/>
 
 ### Install Boot
 
@@ -244,7 +244,7 @@ Official site: `https://boot-clj.com/`
 
 ### Using Boot
 
-Full tutorial/more details: `https://github.com/boot-clj/boot`
+Full tutorial/more details: <https://github.com/boot-clj/boot>
 
 * Available boot commands/help
 
@@ -273,5 +273,5 @@ Full tutorial/more details: `https://github.com/boot-clj/boot`
 ```
 
 * The shebang env boot line (first line), uses the boot binary
-* The set-env line will auto download required dependencies from remote sources such as `https://clojars.org/`
+* The set-env line will auto download required dependencies from remote sources such as <https://clojars.org/>
 * The require section to use any libraries
