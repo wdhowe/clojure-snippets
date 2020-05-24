@@ -31,7 +31,7 @@ Templates
 * Pre-Req: Install openjdk and verify
 
   ```bash
-  sudo apt install openjdk-13-jdk
+  sudo apt install openjdk-8-jdk
   java -version
   ```
 
