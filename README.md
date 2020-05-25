@@ -13,9 +13,10 @@ Snippets
 * basic_syntax -> Basic syntax (hello world, math operators, comparison operators, variables)
 * data_structures -> Core data types (lists, maps, sets, vectors)
 * file_operations -> Interacting with files and EDN for configuration.
-* flow_control -> Flow control concepts (case, cond, iters, for, if, when, recursion)
+* flow_control -> Flow control concepts (case, cond, exceptions, if, do, when)
 * functions -> Using functions (and anonymous/lambda) in clojure
 * http -> Http/get examples
+* loop_recur -> Looping, recursion, iteration.
 * misc -> Miscellanious items (date)
 * power_tools -> Some powerful Clojure built in core functions (apply, comp, filter, loop, map, partial, reduce)
 
