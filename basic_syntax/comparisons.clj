@@ -1,4 +1,4 @@
-(ns clojure.examples.relational (:gen-class))
+(ns clojure.examples.comparisons (:gen-class))
 
 (defn do-compare
   []
