@@ -1,5 +1,9 @@
 (ns clojure.examples.myvars (:gen-class))
 
+; symbols bound via def are global.
+(def earth "round")
+
+; symbols bound via let are local to that function.
 (defn main
   []
   (let [myname "Robert"
@@ -11,6 +15,7 @@
     (println "My var is:" myvar)
     (println "My atom var is:" @myatomvar)
     (swap! myatomvar inc)
-    (println "My atom var is now:" @myatomvar)))
+    (println "My atom var is now:" @myatomvar)
+    (println "Earth is:" earth)))
 
 (main)
