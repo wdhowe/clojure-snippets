@@ -1,4 +1,5 @@
 ;; sets - unique values/no duplicates
+;; Use when: You need to store a collection of unique values.
 
 ; Creating sets - literal and keyword
 (def jedi #{"yoda" "obi-wan" "luke"})

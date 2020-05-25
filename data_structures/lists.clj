@@ -1,4 +1,7 @@
 ;; lists - sequential linked lists
+;; Use when: You need to store a sequence of values AND
+;;           you need to add to the beginning OR
+;;           you are writing a macro. (otherwise, use a vector)
 
 ; Creating lists - literal and keyword
 (def list1 '(1 2 3))
