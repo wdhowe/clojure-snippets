@@ -1,21 +1,26 @@
-; sets - unordered, no duplicates
+;; sets - unique values/no duplicates
 
+; Creating sets - literal and keyword
 (def jedi #{"yoda" "obi-wan" "luke"})
+(def sith (hash-set "vader" "palpatine"))
 
+; The sets
 (println "Some Jedi are:" jedi)
-(println "Adding another:" (conj jedi "quigon"))
-(println "Some...died." (disj jedi "obi-wan" "yoda"))
+(println "Some Sith are:" sith)
 
-(println "\nIs Luke a Jedi?" (contains? jedi "luke"))
-(println "Sorted" (conj (sorted-set) "yoda" "obi-wan" "luke"))
+; Getting items
+(println "\nFirst item in jedi set:" (first jedi))
+(println "Last item in jedi set:" (last jedi))
+(println "Specific item in jedi set (yoda):" (get jedi "yoda"))
 
-; sets can be joined with 'into'
-(def sith #{"vader" "palpatine"})
+; Adding/removing
+(println "\nAdding another (conj):" (conj jedi "quigon"))
+(println "Some...died. (disj on original set)" (disj jedi "obi-wan" "yoda"))
 
-(println "\nUsers of the force (two sets):" (into jedi sith))
+; Checking the set
+(println "\nIs Luke a Jedi? (contains?)" (contains? jedi "luke"))
+(println "Is Luke a Sith? (contains?)" (contains? sith "luke"))
 
-; into can also join other collections (vectors, sets, lists, maps)
-(def friends (vector "joe" "john"))
-
-(println "\nUsers of the force and some friends (set and vector):"
-         (into jedi friends))
+; Create sets from a vector
+(def friends ["joe" "john" "joe" "joe"])
+(println "\nSet from a vector (removes dups):" (set friends))
