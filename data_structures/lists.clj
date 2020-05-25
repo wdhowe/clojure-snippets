@@ -2,9 +2,9 @@
 ; new elements added to the front/head
 
 (def list1 '(1 2 3))
-(println "The first list is:" list1)
+
+(println "The list is:" list1)
 (println "The first item is:" (first list1))
-(println "The rest of them are:" (rest list1))
-(println "The first item via peek is:" (peek list1))
-(println "Last items are:" (pop list1))
-(println "Some items added:" (conj list1 40 50))
+(println "The last item is:" (last list1))
+(println "The nth item at position 1 is:" (nth list1 1))
+(println "Add items to the beginning of the list with conj:" (conj list1 40 50))
