@@ -12,7 +12,7 @@
   (println "My num is even.")
   (println "My num is odd."))
 
-;; do
+;; do - wrap up multiple lines
 (if (even? mynum)
   (do (println "\nIt is even.")
       (println "...Steven."))
@@ -20,7 +20,6 @@
       (println "...Todd.")))
 
 ;; when - combination of if/do with no else
-
 (when (neg? mynum)
   (println "\nI'm pretty sure its negative, but I'm not positive.")
   (println "Anything else?"))
