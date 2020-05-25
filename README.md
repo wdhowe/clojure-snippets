@@ -10,7 +10,7 @@ Short files that demonstrate syntax and concepts.
 
 Snippets
 
-* collections -> Collection data types (lists, maps, sets, vectors)
+* data_structures -> Core data types (lists, maps, sets, vectors)
 * file_operations -> Interacting with files and EDN for configuration.
 * flow_control -> Flow control concepts (case, cond, iters, for, if, when, recursion)
 * functions -> Using functions (and anonymous/lambda) in clojure
