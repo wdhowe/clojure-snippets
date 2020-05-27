@@ -58,6 +58,48 @@ Templates
 
 ----
 
+## REPL Help
+
+Commands that can be entered in the REPL for finding help, documentation, and more.
+
+Load clojure REPL helper functions
+
+```clojure
+(require '[clojure.repl :refer :all])
+```
+
+doc - display documentation for a function
+
+```clojure
+(doc +)
+```
+
+apropos - find function names that match a string
+
+```clojure
+(apropos "+")
+```
+
+find-doc - wider function search that includes docstrings
+
+```clojure
+(find-doc "trim")
+```
+
+dir - view full listing of functions in a namespace
+
+```clojure
+(dir clojure.repl)
+```
+
+source - view function description and source
+
+```clojure
+(source dir)
+```
+
+----
+
 ## Clojure CLI/deps Projects
 
 Clojure CLI tools (with deps.edn) allow for a built in way to create projects.
