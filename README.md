@@ -22,8 +22,7 @@ Snippets
 
 Templates
 
-* template -> Template for a Clojure CLI/deps project with cli args. (run 'clj -m template -h' from that dir) Does not need boot or lein.
-* template.boot -> Template for a single file Clojure script via boot with cli args
+* template -> Template for a Clojure CLI/deps project with cli args. (run 'clj -m template.core -h' from that dir) Does not need boot or lein.
 
 ----
 
@@ -215,64 +214,3 @@ project.clj example:
 ```
 
 ----
-
-## Boot Projects
-
-Boot is an alternative project management/build tool to Leiningen. It can also be used for single file Clojure scripts if you don't want to create a full project.
-
-Official site: <https://boot-clj.com/>
-
-### Install Boot
-
-* Download the boot binary
-
-  ```bash
-  wget https://github.com/boot-clj/boot-bin/releases/download/latest/boot.sh
-  ```
-
-* Move to a directory in your PATH and make executable
-
-  ```bash
-  mv boot.sh ~/bin/boot
-  chmod +x ~/bin/boot
-  ```
-
-* Initial execution in order to download requirements (boot -h > help)
-
-  ```bash
-  boot -h
-  ```
-
-### Using Boot
-
-Full tutorial/more details: <https://github.com/boot-clj/boot>
-
-* Available boot commands/help
-
-  ```bash
-  boot -h
-  ```
-
-* Open the boot REPL
-
-  ```bash
-  boot repl
-  ```
-
-#### Use boot for single file scripts
-
-```clojure
-#!/usr/bin/env boot
-
-; boot environment settings - downloads dependencies automatically
-(set-env! :dependencies '[[clj-http "3.10.0"]])
-
-; boot clojar requirement
-(require '[clj-http.client :as http])
-
-;; ...the rest of the script
-```
-
-* The shebang env boot line (first line), uses the boot binary
-* The set-env line will auto download required dependencies from remote sources such as <https://clojars.org/>
-* The require section to use any libraries
