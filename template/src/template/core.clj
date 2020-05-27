@@ -1,4 +1,4 @@
-(ns template
+(ns template.core
   (:require [clojure.tools.cli])
   (:gen-class))
 
