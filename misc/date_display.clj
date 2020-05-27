@@ -1,4 +1,4 @@
-;;;; Examples displaying date objects
+;; Examples displaying date objects
 (ns date-display)
 
 (defn -main

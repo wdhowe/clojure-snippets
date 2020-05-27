@@ -1,4 +1,4 @@
-; Exception handling
+;; Exception handling
 
 (def x 10)
 (def y 0)

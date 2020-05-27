@@ -1,4 +1,4 @@
-;;; cond - series of conditional tests/expressions
+;; cond - series of conditional tests/expressions
 
 (def mynum 30)
 
