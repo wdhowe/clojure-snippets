@@ -4,7 +4,19 @@
 ; The body is executed, you either exit with some value or loop again
 ; with 'recur'
 
-(defn dostuff
+;; recur on defn
+(defn increase
+  "Recur on own function defn."
+  [i]
+  (if (< i 10) (recur (inc i)) i))
+
+(println (increase 5))
+(println (increase 1))
+(println (increase 100))
+
+;; loop,recur vector accumlation example
+(defn accum-numbers
+  "Accumulate numbers into a vector, up to the max passed in."
   [themax]
   ; loop expression with initial bound variables
   (loop [accum []
@@ -15,5 +27,5 @@
       ; otherwise, call loop again with new args
       (recur (conj accum x) (inc x)))))
 
-(def stuffresults (dostuff 15))
-(println stuffresults)
+(def results (accum-numbers 15))
+(println results)
