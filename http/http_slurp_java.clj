@@ -1,4 +1,4 @@
-; Using the Java URL class
+; Using slurp and the Java URL class
 
 ; content get
 (defn http-get [url] (slurp (.openStream (java.net.URL. url))))
