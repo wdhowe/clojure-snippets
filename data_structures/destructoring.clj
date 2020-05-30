@@ -4,8 +4,26 @@
 ; retain access to the original structure with ":as"
 (defn my-location
   "Show my location."
-  [{:keys [long lat], :as orig-data}]
+  [{:keys [long lat] :as orig-data}]
   (println "My location is: long(" long "), lat(" lat ")")
-  (println "The original data is: " orig-data))
+  (println "The original data is:" orig-data))
 
 (my-location {:long 50.2, :lat 60.5, :activity "chillin"})
+
+; another way to destructure a map - explicit binding symbols to keys.
+(defn my-location2
+  "Show my location...again."
+  [{long :long lat :lat}]
+  (println "\nMy location 2 is: long(" long "), lat(" lat ")"))
+
+(my-location2 {:long 50.2, :lat 60.5, :activity "chillin"})
+
+; destructure a vector
+(defn my-stuff
+  "Some of my things."
+  [[first-thing second-thing & others]]
+  (println "\nThe best thing is:" first-thing)
+  (println "The next best thing is:" second-thing)
+  (println "Annd...the rest:" others))
+
+(my-stuff ["laptop" "pizza" "socks" "phone" "movies"])
