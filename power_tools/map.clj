@@ -11,4 +11,5 @@
 
 ; map a function across two collections, stop automatically
 ; when the shorter collection runs out of items
-(println (map (fn [x y] (str x y)) mylist2 mylist))
+; uses "into []" to convert the returned list seq back to a vector.
+(println (into [] (map (fn [x y] (str x " " y)) mylist2 mylist)))
