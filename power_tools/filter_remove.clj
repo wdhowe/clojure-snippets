@@ -9,3 +9,7 @@
 ; reduce - remove items that return true
 (println "\nRemove odd")
 (println (remove odd? mylist))
+
+; some - test if any value in a collection returns true for
+; a function.
+(println "\nSome test (any num > 9):" (some (fn [num] (> num 9)) mylist))
