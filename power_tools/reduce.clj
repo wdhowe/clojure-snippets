@@ -11,9 +11,13 @@
 (println "\nInitial value of 10:" (reduce + 10 mylist))
 
 (println
-  "\nAccumulating a data structure"
-  (reduce (fn [item x] (assoc item (keyword x) (str x \- (rand-int 100))))
-    ; the first arg(item), an empty map
+  "\nCreating a hash-map from a vector."
+  (reduce (fn [new-map x] (assoc new-map (keyword x) (rand-int 100)))
     {}
-    ; the second arg(x), a vector
     ["first" "second" "third"]))
+
+(println
+ "\nCreating a new hash-map with updated values from an existing map."
+ (reduce (fn [new-map [key value]] (assoc new-map key (inc value)))
+         {}
+         {:first 1 :second 2 :third 3}))
