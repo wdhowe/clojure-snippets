@@ -11,6 +11,7 @@ Short files that demonstrate syntax and concepts.
 Snippets
 
 * basic_syntax -> Basic syntax (hello world, math operators, comparison operators, variables)
+* col_funcs -> Functions that operate against entire collections. (empty, )
 * data_structures -> Core data types. (lists, maps, sets, vectors)
 * file_operations -> Interacting with files and EDN for configuration.
 * flow_control -> Flow control concepts. (case, cond, exceptions, if, do, when)
@@ -18,7 +19,7 @@ Snippets
 * http -> Http/get examples.
 * iter_recur -> Iteration and recursion.
 * misc -> Miscellanious items. (date)
-* power_tools -> Some powerful Clojure built in core functions. (apply, comp, filter, loop, map, partial, reduce)
+* seq_col_funcs -> Core functions that operate against sequence elements and entire collections. (filter, map, reduce, etc)
 
 Templates
 
