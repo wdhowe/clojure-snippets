@@ -10,12 +10,11 @@ Short files that demonstrate syntax and concepts.
 
 Snippets
 
-* basic_syntax -> Basic syntax (hello world, math operators, comparison operators, variables)
-* col_funcs -> Functions that operate against entire collections. (empty, )
-* data_structures -> Core data types. (lists, maps, sets, vectors)
+* basic_syntax -> Getting started with basic syntax. (hello world, math operators, comparison operators, variables)
+* data_structures -> Core data types and destructuring them. (lists, maps, sets, vectors)
 * file_operations -> Interacting with files and EDN for configuration.
 * flow_control -> Flow control concepts. (case, cond, exceptions, if, do, when)
-* functions -> Anonymous functions/lambda, multi-arity, composing functions.
+* functions -> Anonymous functions/lambda, multi-arity, composing functions, functions that accept and return functions (apply, partial).
 * http -> Http/get examples.
 * iter_recur -> Iteration and recursion.
 * misc -> Miscellanious items. (date)
