@@ -17,6 +17,7 @@ Snippets
 * functions -> Anonymous functions/lambda, multi-arity, composing functions, functions that accept and return functions (apply, partial).
 * http -> Http/get examples.
 * iter_recur -> Iteration and recursion.
+* macros -> Macro definition examples.
 * misc -> Miscellanious items. (date)
 * seq_col_funcs -> Core functions that operate against sequence elements and entire collections. (filter, map, reduce, etc)
 
