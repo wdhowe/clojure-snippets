@@ -11,6 +11,7 @@ Short files that demonstrate syntax and concepts.
 Snippets
 
 * basic_syntax -> Getting started with basic syntax. (hello world, math operators, comparison operators, variables)
+* concurrency -> Processing on multiple threads concurrently. (futures, delays, promises)
 * data_structures -> Core data types and destructuring them. (lists, maps, sets, vectors)
 * file_operations -> Interacting with files and EDN for configuration.
 * flow_control -> Flow control concepts. (case, cond, exceptions, if, do, when)
