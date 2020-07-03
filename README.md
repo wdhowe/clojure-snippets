@@ -21,6 +21,7 @@ Snippets
 * macros -> Macro definition examples.
 * misc -> Miscellanious items. (date)
 * seq_col_funcs -> Core functions that operate against sequence elements and entire collections. (filter, map, reduce, etc)
+* state -> Using state like behavior. (atoms, watchers, validators)
 
 Templates
 
