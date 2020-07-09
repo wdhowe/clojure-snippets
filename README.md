@@ -10,6 +10,7 @@ Short files that demonstrate syntax and concepts.
 
 Snippets
 
+* abstractions -> Creating abstractions with multimethods, protocols, and records.
 * basic_syntax -> Getting started with basic syntax. (hello world, math operators, comparison operators, variables)
 * concurrency -> Processing on multiple threads concurrently. (futures, delays, promises, core.async)
 * data_structures -> Core data types and destructuring them. (lists, maps, sets, vectors)
