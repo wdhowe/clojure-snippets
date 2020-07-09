@@ -11,10 +11,11 @@
   (buy-bleach [payment] "Buy some bleach."))
 
 ; define how the protocol is implemented by type.
-; implement a protocol by extending a Java data type.
+; implement a protocol by extending the protocol and then
+; specifying a Java data type.
 ; if a type is extended/implemented, every function must be implemented.
-(extend-type java.lang.Double
-  pandemic-vend
+(extend-protocol pandemic-vend
+  java.lang.Double
   (buy-tp [payment]
     (if (= payment 2.00)
       (str "Whirr..tp dispensed.")
