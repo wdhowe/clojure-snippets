@@ -4,11 +4,15 @@
 ; retain access to the original structure with ":as"
 (defn my-location
   "Show my location."
-  [{:keys [long lat] :as orig-data}]
+  [{:keys [long lat]
+    :or {long "here" lat "there"}  ; set default values if keys are missing from args
+    :as orig-data}]
   (println "My location is: long(" long "), lat(" lat ")")
   (println "The original data is:" orig-data))
 
 (my-location {:long 50.2, :lat 60.5, :activity "chillin"})
+(println "\nCall again, but with a missing key to trigger defaults.")
+(my-location {:long 100.0 :activity "chillin again"})
 
 ; another way to destructure a map - explicit binding symbols to keys.
 (defn my-location2
