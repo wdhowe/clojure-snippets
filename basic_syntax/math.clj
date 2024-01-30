@@ -1,4 +1,4 @@
-(ns clojure.examples.math (:gen-class))
+; math basics
 
 (defn do-math
   []

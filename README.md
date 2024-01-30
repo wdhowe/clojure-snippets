@@ -6,6 +6,22 @@ Short files that demonstrate syntax and concepts.
 
 ----
 
+## Execute
+
+Run individual snippet files via clj -M FILENAME.
+
+Example:
+
+```bash
+clj -M basic_syntax/hello_world.clj
+```
+
+Output
+
+```bash
+Hello Clojure world!
+```
+
 ## Descriptions
 
 Snippets
@@ -21,7 +37,7 @@ Snippets
 * iter_recur -> Iteration and recursion.
 * java_interop -> Using Java's methods, objects, libraries.
 * macros -> Macro definition examples.
-* misc -> Miscellanious items. (date, fizz buzz)
+* misc -> Miscellaneous items. (date, fizz buzz)
 * seq_col_funcs -> Core functions that operate against sequence elements and entire collections. (filter, map, reduce, etc)
 * state -> Using state like behavior. (atoms, watchers, validators)
 

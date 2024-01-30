@@ -1,4 +1,4 @@
-(ns clojure.examples.myvars (:gen-class))
+; variables
 
 ; symbols bound via def are global.
 (def earth "round")

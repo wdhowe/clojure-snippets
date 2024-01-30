@@ -1,8 +1,10 @@
-;; Clojure namespace
-(ns clojure.examples.hello (:gen-class))
+; hello_world
 
-;; Clojure function
-(defn hello-world [] (println "Hello Clojure world!"))
+;; Clojure function - no parameters
+(defn hello-world
+  "Function docstring here."
+  []
+  (println "Hello Clojure world!"))
 
 ;; Calling a function
 (hello-world)

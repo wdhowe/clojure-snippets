@@ -7,13 +7,19 @@
    This code is a combination of the 'Source' blogpost and the comment section.
    Source: https://blog.klipse.tech/clojure/2020/09/11/fizbuzz-clj.html")
 
-(defn fizzbuzz [n]
-  (let [fizzes (cycle ["" "" "fizz"]) ; fizz every 3
-        buzzes (cycle ["" "" "" "" "buzz"]) ; buzz every 5
-        words (map str fizzes buzzes) ; combine fizz/buzz cycles
-        numbers (map str (rest (range)))] ; number 1-infinity and convert to strings
-    ; return the first non-empty string for each position in the cycle
-    (take n (map #(some not-empty %&) words numbers))))
+(defn fizzes [] (cycle ["" "" "fizz"]))
+
+(defn buzzes [] (cycle ["" "" "" "" "buzz"]))
+
+(defn fizz-buzz-cycle [] (map str (fizzes) (buzzes)))
+
+(defn one->infinity [] (map str (rest (range))))
+
+(defn fizzbuzz
+  [n] 
+  (take n
+    (map #(some not-empty %&) ; return the first non-empty string for each position in the cycle
+          (fizz-buzz-cycle) (one->infinity))))
 
 (def my-num 15)
 (println "fizzbuzz" my-num)
