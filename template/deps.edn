@@ -1,2 +1,13 @@
-{:paths ["src" "classes"]
- :deps {org.clojure/tools.cli {:mvn/version "0.4.2"}}}
+{;; Dependencies
+ :deps {org.clojure/tools.cli {:mvn/version "1.0.219"}}
+ 
+ ;; File system paths
+ :paths ["src" "resources"]
+
+ :aliases
+ {;; clj -M:cli -h
+  :cli {:main-opts ["-m" "template.core"]}
+  
+  ;; Upgrade outdated deps: clj -M:outdated :upgrade true
+  :outdated {:deps {com.github.liquidz/antq {:mvn/version "RELEASE"}}
+             :main-opts ["-m" "antq.core"]}}}

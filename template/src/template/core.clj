@@ -2,20 +2,25 @@
   (:require [clojure.tools.cli])
   (:gen-class))
 
-(def cli_options
+(def cli-options
   "CLI arguments (clojure.tools.cli)"
   [;[short-option long-option description :other options]
    ["-h" "--help" "Show help" :default false]
    ["-v" "--verbose" "Verbose output" :default false]
    ["-n" "--name NAME" "Name to greet" :default "Bobby Tables"]])
 
-(defn show_usage
+(defn show-usage
   "Show the application usage."
-  [cli_args]
+  [args]
   (println "--App Usage--")
-  (println (:summary cli_args)))
+  (println (:summary args)))
 
-(defn say_hello
+(defn verbose?
+  "Determine if args contain verbose."
+  [args]
+  (get-in args [:options :verbose]))
+
+(defn say-hello
   "FIXME - An important function."
   [name]
   (println "Hello" name "!"))
@@ -24,15 +29,15 @@
   "FIXME - main description here"
   [& args]
   ; parse command line args
-  (let [cli_args (clojure.tools.cli/parse-opts args cli_options)
-        the_name (get-in cli_args [:options :name])]
+  (let [cli-args (clojure.tools.cli/parse-opts args cli-options)
+        the-name (get-in cli-args [:options :name])]
     ; show usage when help flag set and exit
-    (when (get-in cli_args [:options :help])
-      (show_usage cli_args)
+    (when (get-in cli-args [:options :help])
+      (show-usage cli-args)
       (System/exit 0))
 
     ; verbose mode output
-    (when (get-in cli_args [:options :verbose])
-      (println "-> Calling say_hello"))
+    (when (verbose? cli-args)
+      (println "-> Calling say-hello"))
 
-    (say_hello the_name)))
+    (say-hello the-name)))

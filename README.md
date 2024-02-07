@@ -43,7 +43,7 @@ Snippets
 
 Templates
 
-* template -> Template for a Clojure CLI/deps project with cli args. (run 'clj -m template.core -h' from that dir) Does not need boot or lein.
+* template -> Template for a Clojure CLI/deps project with cli args.
 
 ----
 
